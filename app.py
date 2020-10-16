@@ -24,11 +24,11 @@ def make_maze(num, color=('lightblue', 'pink') , height=500):
         #choose a random direction for the diagonal line
         if random.choice([0, 1]) == 0:
             #write the line
-	    cnt_lines += 1
+			cnt_lines += 1
             txt += draw_diagonal(col, row, col + step, row + step, color[0])
         else:
             #write the line
-	    cnt_lines += 1
+			cnt_lines += 1
             txt += draw_diagonal(col + step, row, col, row + step, color[1])
     #write the footer
     footer = f'</svg>'

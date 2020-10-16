@@ -58,7 +58,7 @@ if __name__ == "__main__":
         st_col2 = st.sidebar.beta_color_picker('Pick another color: ', value='#FFC0CB')
     
     st.markdown('## Maze!')
-    if st.sidebar.button:
+    if st.sidebar.button('GO!'):
         svg = make_maze(st_num_lines, color=[st_col1, st_col2])
         st.image(svg)
     

@@ -1,5 +1,15 @@
 import streamlit as st
 import random
+import requests
+
+
+def get_color():
+    resp = requests.get('https://api.noopschallenge.com/hexbot')
+    data = resp.json()
+    color = data['colors'][0]['value']
+    st.write('response:', data)
+    st.write('color: ', color)
+    return color
 
 
 def draw_diagonal(x, y, x2, y2, color='black'):
@@ -45,4 +55,6 @@ if __name__ == "__main__":
     #st.write(svg)
     st.image(svg)
     
+    color = get_color()
+ 
     st.text('adapted from https://github.com/hogesonline/svg_play/blob/master/maze.py')

@@ -32,6 +32,7 @@ def make_maze(num, color = "black" , height = 500):
     return txt
 
 if __name__ == "__main__":
+    st.markdown('## Maze!')
     svg = make_maze(50, color="darkviolet" )
     #st.write(svg)
     st.image(svg)

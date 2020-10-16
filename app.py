@@ -11,7 +11,7 @@ def make_maze(num, color = "black" , height = 500):
 	#num is the number of diagonals across and down
 	#filename is the output file name
     width = height
-    header = f'<svg viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg">\n'
+    header = f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n'
     
     step=height // num
     #write the header for the file

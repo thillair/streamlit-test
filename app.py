@@ -48,7 +48,7 @@ def make_maze(num, color=('lightblue', 'pink') , height=500):
 
 if __name__ == "__main__":
     st_random = st.sidebar.radio('Random inputs: ', options=['Yes', 'No'], index=0)
-    if st_random = 'Yes':
+    if st_random == 'Yes':
         st_num_lines = random.choice([x for x in range(1, 101)])
         st_col1 = get_color()
         st_col2 = get_color()

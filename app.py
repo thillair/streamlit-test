@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import random
 import requests
 
@@ -62,5 +63,8 @@ if __name__ == "__main__":
         svg = make_maze(st_num_lines, color=[st_col1, st_col2])
         st.image(svg)
         st.markdown(f' lines {st_num_lines}, color1 {st_col1}, color2 {st_col2}')
-    
+	
+	html = """ <div style="background-color: {get_color()}"> </div>"""
+	components.html(html, height=100, width=100, scrolling=False)
+	 
     st.text('adapted from https://github.com/hogesonline/svg_play/blob/master/maze.py')

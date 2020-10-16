@@ -8,7 +8,7 @@ def draw_diagonal(x, y, x2, y2, color='black'):
             y2="{y2}" stroke="{color}" />'
 
 
-def make_maze(num, color=('lightblue', 'pink') , height=300):
+def make_maze(num, color=('lightblue', 'pink') , height=500):
     #num is the number of diagonals across and down
 	
     width = height

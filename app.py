@@ -14,22 +14,26 @@ def make_maze(num, color=('lightblue', 'pink') , height=500):
     width = height
     header = f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">\n'
     
-    step=height // num
+    step = height // num
     #write the header 
     txt = header
     #loop through 
+    cnt_lines = 0
     for row in range(0, height, step):
       for col in range(0, width, step):
         #choose a random direction for the diagonal line
         if random.choice([0, 1]) == 0:
             #write the line
+	    cnt_lines += 1
             txt += draw_diagonal(col, row, col + step, row + step, color[0])
         else:
             #write the line
+	    cnt_lines += 1
             txt += draw_diagonal(col + step, row, col, row + step, color[1])
     #write the footer
     footer = f'</svg>'
     txt += footer
+    st.write('num lines: ', cnt_lines)
     return txt
 
 if __name__ == "__main__":

@@ -7,8 +7,8 @@ def get_color():
     resp = requests.get('https://api.noopschallenge.com/hexbot')
     data = resp.json()
     color = data['colors'][0]['value']
-    st.write('response:', data)
-    st.write('color: ', color)
+    #st.write('response:', data)
+    #st.write('color: ', color)
     return color
 
 
@@ -51,10 +51,10 @@ if __name__ == "__main__":
     st_col1 = st.sidebar.beta_color_picker('Pick a color: ', value='#ADD8E6')
     st_col2 = st.sidebar.beta_color_picker('Pick another color: ', value='#FFC0CB')
     st.markdown('## Maze!')
-    svg = make_maze(st_num_lines, color=[st_col1, st_col2])
+    svg = make_maze(st_num_lines, color=[get_color(), get_color()])
     #st.write(svg)
     st.image(svg)
     
-    color = get_color()
+    #color = get_color()
  
     st.text('adapted from https://github.com/hogesonline/svg_play/blob/master/maze.py')

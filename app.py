@@ -43,7 +43,7 @@ def make_maze(num, color=('lightblue', 'pink') , height=500):
     #write the footer
     footer = f'</svg>'
     txt += footer
-    st.write('num lines: ', cnt_lines)
+    st.write('count of lines: ', cnt_lines)
     return txt
 
 if __name__ == "__main__":
@@ -61,5 +61,6 @@ if __name__ == "__main__":
     if st.sidebar.button('GO!'):
         svg = make_maze(st_num_lines, color=[st_col1, st_col2])
         st.image(svg)
+        st.markdown(f' lines {st_num_lines}, color1 {st_col1}, color2 {st_col2}')
     
     st.text('adapted from https://github.com/hogesonline/svg_play/blob/master/maze.py')

@@ -33,7 +33,7 @@ def make_maze(num, color=('lightblue', 'pink') , height=500):
     return txt
 
 if __name__ == "__main__":
-    st_num_lines = st.sidebar.slider('# lines: ', min_value=1, max_value=100, step=1)	
+    st_num_lines = st.sidebar.slider('# lines: ', min_value=1, max_value=100, step=1, value=50)	
     st_col1 = st.sidebar.beta_color_picker('Pick a color: ', value='#ADD8E6')
     st_col2 = st.sidebar.beta_color_picker('Pick another color: ', value='#FFC0CB')
     st.markdown('## Maze!')

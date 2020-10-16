@@ -47,14 +47,19 @@ def make_maze(num, color=('lightblue', 'pink') , height=500):
     return txt
 
 if __name__ == "__main__":
-    st_num_lines = st.sidebar.slider('# lines: ', min_value=1, max_value=100, step=1, value=50)	
-    st_col1 = st.sidebar.beta_color_picker('Pick a color: ', value='#ADD8E6')
-    st_col2 = st.sidebar.beta_color_picker('Pick another color: ', value='#FFC0CB')
-    st.markdown('## Maze!')
-    svg = make_maze(st_num_lines, color=[get_color(), get_color()])
-    #st.write(svg)
-    st.image(svg)
+    st_random = st.sidebar.radio('Random inputs: ', options=['Yes', 'No'], index=0)
+    if st_random = 'Yes':
+        st_num_lines = random.choice([x for x in range(1, 101)])
+        st_col1 = get_color()
+        st_col2 = get_color()
+    else:
+        st_num_lines = st.sidebar.slider('# lines: ', min_value=1, max_value=100, step=1, value=50)	
+        st_col1 =  = st.sidebar.beta_color_picker('Pick a color: ', value='#ADD8E6')
+        st_col2 = st.sidebar.beta_color_picker('Pick another color: ', value='#FFC0CB')
     
-    #color = get_color()
- 
+    st.markdown('## Maze!')
+    if st.sidebar.button:
+        svg = make_maze(st_num_lines, color=[st_col1, st_col2])
+        st.image(svg)
+    
     st.text('adapted from https://github.com/hogesonline/svg_play/blob/master/maze.py')

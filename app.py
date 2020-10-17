@@ -65,7 +65,7 @@ if __name__ == "__main__":
         st.markdown(f' lines {st_num_lines}, color1 {st_col1}, color2 {st_col2}')
 	
         html = f""" 
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr);">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px;">
             <div style="background-color: {st_col1}; height: 100px; width: 100px; border: 1px solid black;"> 
             {st_col1}
             </div>

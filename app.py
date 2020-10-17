@@ -66,10 +66,10 @@ if __name__ == "__main__":
 	
         html = f""" 
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px;">
-            <div style="background-color: {st_col1}; height: 100px; width: 100px; border: 1px solid black;"> 
+            <div style="background-color: {st_col1}; height: 10px; width: 10px; border: 1px solid black;"> 
             {st_col1}
             </div>
-            <div style="background-color: {st_col2}; height: 100px; width: 100px; border: 1px solid black;"> 
+            <div style="background-color: {st_col2}; height: 10px; width: 10px; border: 1px solid black;"> 
             {st_col2}
             </div>
         </div>

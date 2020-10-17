@@ -65,11 +65,11 @@ if __name__ == "__main__":
         st.markdown(f' lines {st_num_lines}, color1 {st_col1}, color2 {st_col2}')
 	
         html = f""" 
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 100px;">
-            <div style="background-color: {st_col1}; height: 10px; width: 10px; border: 1px solid black;"> 
+        <div style="display: grid; grid-template-columns: repeat(1, 1fr); grid-gap: 10px;">
+            <div style="background-color: {st_col1}; height: 20px; width: 20px; border: 1px solid black;"> 
             {st_col1}
             </div>
-            <div style="background-color: {st_col2}; height: 10px; width: 10px; border: 1px solid black;"> 
+            <div style="background-color: {st_col2}; height: 20px; width: 20px; border: 1px solid black;"> 
             {st_col2}
             </div>
         </div>

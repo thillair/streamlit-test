@@ -65,7 +65,7 @@ if __name__ == "__main__":
         st.markdown(f' lines {st_num_lines}, color1 {st_col1}, color2 {st_col2}')
 	
         html = f""" 
-        <div style="display: grid;">
+        <div style="display: flexbox;">
             <div style="background-color: {get_color()}; height: 100px; width: 100px; "> 
             </div>
             <div style="background-color: {get_color()}; height: 100px; width: 100px; "> 

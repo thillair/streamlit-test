@@ -64,8 +64,11 @@ if __name__ == "__main__":
         st.image(svg)
         st.markdown(f' lines {st_num_lines}, color1 {st_col1}, color2 {st_col2}')
 	
-        html = f""" <div style="background-color: {get_color()}; height: 10px; width: 10px; "> 
-	            </div>
+        html = f""" 
+        <div style="background-color: {get_color()}; height: 10px; width: 10px; "> 
+        </div>
+        <div style="background-color: {get_color()}; height: 10px; width: 10px; "> 
+        </div>
 		"""
         components.html(html, height=100, width=100, scrolling=False)
 	 
